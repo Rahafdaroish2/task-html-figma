@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+:root{
+    --bg: #000;
+    --text: #ffffff;
+    --Shapes1: #FB72FF;
+    --Shapes2: #60FDF4;
+    --Shapes3 :#FFD426;
+    --Shapes4:#4CABE1;
+    --Shapes5:#62EB9A;
+    --hover: #FB72FF;
+    --font-family-h: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-family-p:Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo{
+    width: 5rem;
+    height: 3rem;
+    margin: 0 50px;
+}
+nav{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--bg); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.url{
+    gap: 4rem; 
+    display: flex;
+    align-items: center;
+    margin-left: 800px;
+}
+nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s;
+ }
+
+nav a:hover {
+      color: var(--hover); 
+}
+.Work{
+ margin-top: 5rem;
+ text-align: center;
+}
+.para{
+    margin-left: 20rem;
+}
+.para1, .para2{
+    color: var(--text);
+    padding: 0.5rem;
+}
+.para1{
+    font-family:var(--font-family-h);
+    font-size:2rem;
+}
+.para2{
+    font-family:var(--font-family-p);
+      font-size:0.8rem;
+      font-weight: 100;
+}
+.shapes-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 2rem;
+}
+
+ .triangle {
+      position: absolute;
+    bottom: 0;
+    left: 80px;
+      width: 0;
+      height: 0;
+      border-left: 8rem solid transparent;
+      border-right: 8rem solid transparent;
+      border-bottom: 10rem solid var(--Shapes2); 
+    }
+ .x-shape {
+      position: absolute;
+     left: 40px;
+    bottom: 150px;
+    width: 120px;
+    height: 120px;
+    }
+    .x-shape::before{
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 30px;
+      height: 120px;
+      background: var(--Shapes1); 
+      transform-origin: center;
+    }
+    .x-shape::after {
+         content: "";
+         position: absolute;
+         left: 47%;
+         width: 30px;
+         height: 100px;
+         background: var(--Shapes1);
+         transform-origin: center;
+    }
+    .x-shape::after {
+    transform: translate(-50%, -15%) rotate(-70deg);
+    }
+    .plus {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      display: flex;
+       align-items: center;
+         justify-content: center;
+      z-index: 1;
+    }
+    .plus::before,
+    .plus::after {
+      content: "";
+      position: absolute;
+      background: var(--Shapes3); 
+    }
+    .plus::before {
+         width: 200px;
+         height: 50px;
+         top: 35px;
+         left: -35px;
+    }
+    .plus::after {
+          width: 50px;
+         height: 200px;
+         left: 45px;
+         top: -35px;
+    }
+    /* .circle-plus{
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         background: #8e9490;
+         z-index:2 ;
+    } */
+   
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--Shapes4); 
+    }
+
+    
+    .rectangle {
+      width: 100px;
+      height: 20px;
+      background: var(--Shapes5); 
+    }
+
+  
+    .line {
+      width: 120px;
+      height: 15px;
+      background: var(--Shapes1); 
+      transform: rotate(20deg);
+    }
